@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Samuel-Pawel</title>
+    <link>https://samch93.github.io/post/</link>
+    <description>Recent content in Posts on Samuel-Pawel</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 11 Jul 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://samch93.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>xkcd plots with R</title>
+      <link>https://samch93.github.io/post/11/07/2018/xkcd-plots-with-r/</link>
+      <pubDate>Wed, 11 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://samch93.github.io/post/11/07/2018/xkcd-plots-with-r/</guid>
+      <description>The webcomic series xkcd by Randall Munroe is one of my favorite things on the internet. In his comics, the physicist Munroe jokes about science, math, and pop-culture.
+Occasionally, the comics feature hand-drawn graphs, such as this one
+It’s possible to create plots with the same style in R by using xkcd, an addon package for the ggplot2 package. The package can be installed from CRAN, additionally one needs to install an xkcd-style font, as described in the vignette of the package.</description>
+    </item>
+    
+  </channel>
+</rss>

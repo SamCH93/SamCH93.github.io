@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta name="description" content="Personal website of Samuel Pawel">
+    
+    <title>Samuel Pawel</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="stylesheet" href="https://samch93.github.io/css/theme-override.css">
+    
+
+<header>
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/r.min.js"></script>
+<script>
+hljs.configure({languages: []});
+hljs.initHighlightingOnLoad();
+</script>
+
+
+
+<link href='https://fonts.googleapis.com/css?family=Fira Sans' rel='stylesheet'>
+
+
+  <nav>
+    <ul>
+      
+      
+      <li class="pull-left ">
+        <a href="https://samch93.github.io/">/samuel-pawel</a>
+      </li>
+      
+      
+      <li class="pull-left ">
+        <a href="https://www.ebpi.uzh.ch/en/aboutus/departments/biostatistics/teambiostats/pawel_samuel.html">/research</a>
+      </li>
+      
+      
+      <li class="pull-left ">
+        <a href="https://www.ebpi.uzh.ch/dam/jcr:be82473d-37e5-4f5d-aeeb-eaef40fc5e50/pawel_samuel_cv_20_12.pdf">/cv</a>
+      </li>
+      
+
+
+
+    </ul>
+  </nav>
+</header>
+
+  </head>
+
+  <body>
+    <br/>
+
+
+<h1><span class="title">xkcd plots with R</span></h1>
+<h2 class="date">11. July 2018</h2>
+
+
+
+<main>
+
+
+
+<p>The webcomic series <a href="https://xkcd.com/">xkcd</a> by Randall Munroe is one of my favorite things on the internet.
+In his comics, the physicist Munroe jokes about science, math, and pop-culture.</p>
+<p>Occasionally, the comics feature hand-drawn graphs, such as this one</p>
+<p><img src="https://imgs.xkcd.com/comics/front_door.png" /></p>
+<p>It’s possible to create plots with the same style in R by using <a href="https://cran.r-project.org/web/packages/xkcd/index.html">xkcd</a>, an addon package for the ggplot2 package.
+The package can be installed from CRAN, additionally one needs to install an xkcd-style font, as described in the vignette of the package.</p>
+<p>In this post I will visualize the “standard creepiness rule” of dating from this comic</p>
+<p><img src="https://imgs.xkcd.com/comics/dating_pools.png" /></p>
+<p>First, let’s write a function to get the upper and lower limit of dateable people for a certain age according to the rule</p>
+<pre class="r"><code>## Standard creepiness range for a given age
+standard_creepiness &lt;- function(age) {
+  lower &lt;- age/2 + 7
+  upper &lt;- 2*(age - 7)
+  data.frame(lower, upper)
+}</code></pre>
+<p>Now, we can create a plot of the dating range using the usual ggplot2 functions.
+One way to make the lines look hand-drawn is to use jittering</p>
+<pre class="r"><code>## Libraries
+library(ggplot2)
+library(xkcd)
+
+## Plot of creepiness range
+age &lt;- seq(14, 100, 1)
+creepy_data &lt;- data.frame(age, standard_creepiness(age))
+creepy_plot &lt;- ggplot(data = creepy_data, aes(x = age, y = age)) +
+  geom_ribbon(aes(ymin = lower, ymax = upper, 
+                  fill = &quot;Standard non-creepiness range&quot;), 
+              alpha = 0.7, position = position_jitter(width = 0.2)) +
+  geom_line(position = position_jitter(width = 0.3), size = 0.7, lty = 2) +
+  labs(x = &quot;Your age&quot;, y = &quot;Partner age&quot;) + 
+  theme(legend.position = &quot;top&quot;) +
+  guides(fill = guide_legend(title = &quot;&quot;)) +
+  scale_fill_manual(values = c(&quot;Standard non-creepiness range&quot; = &quot;grey70&quot;)) +
+  scale_x_continuous(breaks = seq(15, 90, 15)) +
+  scale_y_continuous(breaks = seq(15, 90, 15))</code></pre>
+<p>Next comes the sugar from the xkcd package</p>
+<pre class="r"><code>creepy_plot +
+  annotate(geom = &quot;text&quot;, x = 30, y = 90, 
+           label = &quot;Don&#39;t date under: \nage/2 + 7&quot;, 
+           family = &quot;xkcd&quot;, size = 5.8) +
+  xkcdaxis(xrange = range(age), yrange = range(age)) +
+  theme_xkcd()</code></pre>
+<p><img src="/post/2019-07-11-xkcd-plots-with-r_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p>I hope this post was useful to anyone else who spends weekends at home making graphs :)</p>
+
+</main>
+
+    <footer>
+      
+
+<script>
+(function() {
+  function center_el(tagName) {
+    var tags = document.getElementsByTagName(tagName), i, tag;
+    for (i = 0; i < tags.length; i++) {
+      tag = tags[i];
+      var parent = tag.parentElement;
+      
+      if (parent.childNodes.length === 1) {
+        
+        if (parent.nodeName === 'A') {
+          parent = parent.parentElement;
+          if (parent.childNodes.length != 1) continue;
+        }
+        if (parent.nodeName === 'P') parent.style.textAlign = 'center';
+      }
+    }
+  }
+  var tagNames = ['img', 'embed', 'object'];
+  for (var i = 0; i < tagNames.length; i++) {
+    center_el(tagNames[i]);
+  }
+})();
+</script>
+
+      
+      <hr/>
+      <a href="https://github.com/SamCH93">GitHub</a> - <a href="https://twitter.com/SamuelPawel">Twitter</a>
+      
+      <br>
+      
+      built with <a href="https://github.com/rstudio/blogdown">blogdown</a> and <a href="https://github.com/goodroot/hugo-classic">hugo-classic</a>
+      
+    </footer>
+  </body>
+</html>
+
