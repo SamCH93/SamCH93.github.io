@@ -1,105 +1,203 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <meta name="description" content="Personal website of Samuel Pawel">
-    
-    <title>Samuel Pawel</title>
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/fonts.css" />
-    <link rel="stylesheet" href="https://samch93.github.io/css/theme-override.css">
-    
+<html lang="en-US">
 
-<header>
+<head>
 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404</title><style>
+  body {
+    font-family: Verdana, sans-serif;
+    margin: auto;
+    padding: 20px;
+    max-width: 720px;
+    text-align: left;
+    background-color: #fff;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: #444;
+  }
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/r.min.js"></script>
-<script>
-hljs.configure({languages: []});
-hljs.initHighlightingOnLoad();
-</script>
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  strong,
+  b {
+    color: #222;
+  }
 
+  a {
+    color: #3273dc;
+     
+  }
 
+  .title {
+    text-decoration: none;
+    border: 0;
+  }
 
-<link href='https://fonts.googleapis.com/css?family=Fira Sans' rel='stylesheet'>
+  .title span {
+    font-weight: 400;
+  }
 
+  nav a {
+    margin-right: 10px;
+  }
 
-  <nav>
-    <ul>
-      
-      
-      <li class="pull-left ">
-        <a href="https://samch93.github.io/">/samuel-pawel</a>
-      </li>
-      
-      
-      <li class="pull-left ">
-        <a href="https://www.ebpi.uzh.ch/en/aboutus/departments/biostatistics/teambiostats/pawel_samuel.html">/research</a>
-      </li>
-      
-      
-      <li class="pull-left ">
-        <a href="https://www.ebpi.uzh.ch/dam/jcr:be82473d-37e5-4f5d-aeeb-eaef40fc5e50/pawel_samuel_cv_20_12.pdf">/cv</a>
-      </li>
-      
+  textarea {
+    width: 100%;
+    font-size: 16px;
+  }
 
+  input {
+    font-size: 16px;
+  }
 
+  content {
+    line-height: 1.6;
+  }
 
-    </ul>
-  </nav>
-</header>
+  table {
+    width: 100%;
+  }
 
-  </head>
+  img {
+    max-width: 100%;
+  }
 
-  <body>
-    <br/>
+  code {
+    padding: 2px 5px;
+    background-color: #f2f2f2;
+  }
 
+  pre code {
+    color: #222;
+    display: block;
+    padding: 20px;
+    white-space: pre-wrap;
+    font-size: 14px;
+  }
 
-404 NOT FOUND
+  div.highlight pre {
+    background-color: initial;
+    color: initial;
+  }
 
-## Error in your request : object of type 'closure' is not subsettable
+  div.highlight code {
+    background-color: unset;
+    color: unset;
+  }
 
-    <footer>
-      
+  blockquote {
+    border-left: 1px solid #999;
+    color: #222;
+    padding-left: 20px;
+    font-style: italic;
+  }
 
-<script>
-(function() {
-  function center_el(tagName) {
-    var tags = document.getElementsByTagName(tagName), i, tag;
-    for (i = 0; i < tags.length; i++) {
-      tag = tags[i];
-      var parent = tag.parentElement;
-      
-      if (parent.childNodes.length === 1) {
-        
-        if (parent.nodeName === 'A') {
-          parent = parent.parentElement;
-          if (parent.childNodes.length != 1) continue;
-        }
-        if (parent.nodeName === 'P') parent.style.textAlign = 'center';
-      }
+  footer {
+    padding: 25px;
+    text-align: center;
+  }
+
+  .helptext {
+    color: #777;
+    font-size: small;
+  }
+
+  .errorlist {
+    color: #eba613;
+    font-size: small;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: #8b6fcb;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #333;
+      color: #ddd;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong,
+    b {
+      color: #eee;
+    }
+
+    a {
+      color: #8cc2dd;
+    }
+
+    code {
+      background-color: #777;
+    }
+
+    pre code {
+      color: #ddd;
+    }
+
+    blockquote {
+      color: #ccc;
+    }
+
+    textarea,
+    input {
+      background-color: #252525;
+      color: #ddd;
+    }
+
+    .helptext {
+      color: #aaa;
     }
   }
-  var tagNames = ['img', 'embed', 'object'];
-  for (var i = 0; i < tagNames.length; i++) {
-    center_el(tagNames[i]);
-  }
-})();
-</script>
 
-      
-      <hr/>
-      <a href="https://github.com/SamCH93">GitHub</a> - <a href="https://twitter.com/SamuelPawel">Twitter</a>
-      
-      <br>
-      
-      built with <a href="https://github.com/rstudio/blogdown">blogdown</a> and <a href="https://github.com/goodroot/hugo-classic">hugo-classic</a>
-      
-    </footer>
-  </body>
+</style>
+</head>
+
+<body>
+
+  <header><h1>Samuel Pawel</h1>
+<nav>
+<a href="https://www.ebpi.uzh.ch/en/aboutus/departments/biostatistics/teambiostats/pawel_samuel.html">Research</a>
+
+<a href="https://twitter.com/SamuelPawel">Twitter</a>
+
+<a href="https://github.com/SamCH93">GitHub</a>
+
+</nav>
+</header>
+
+  <main>
+<h1>404</h1>
+object of type 'closure' is not subsettable
+
+  </main>
+
+</body>
+
 </html>
-

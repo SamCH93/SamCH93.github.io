@@ -1,130 +1,220 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-	<meta name="generator" content="Hugo 0.79.1" />
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <meta name="description" content="Personal website of Samuel Pawel">
-    
-    <title>Samuel Pawel</title>
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/fonts.css" />
-    <link rel="stylesheet" href="https://samch93.github.io/css/theme-override.css">
-    
+<html lang="en-US">
 
-<header>
+<head>
+	<meta name="generator" content="Hugo 0.96.0" />
 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Samuel Pawel</title><style>
+  body {
+    font-family: Verdana, sans-serif;
+    margin: auto;
+    padding: 20px;
+    max-width: 720px;
+    text-align: left;
+    background-color: #fff;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: #444;
+  }
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/r.min.js"></script>
-<script>
-hljs.configure({languages: []});
-hljs.initHighlightingOnLoad();
-</script>
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  strong,
+  b {
+    color: #222;
+  }
 
-
-
-<link href='https://fonts.googleapis.com/css?family=Fira Sans' rel='stylesheet'>
-
-
-  <nav>
-    <ul>
-      
-      
-      <li class="pull-left current">
-        <a href="https://samch93.github.io/">/samuel-pawel</a>
-      </li>
-      
-      
-      <li class="pull-left ">
-        <a href="https://www.ebpi.uzh.ch/en/aboutus/departments/biostatistics/teambiostats/pawel_samuel.html">/research</a>
-      </li>
-      
-      
-      <li class="pull-left ">
-        <a href="https://www.ebpi.uzh.ch/dam/jcr:7424c51f-b1d7-4374-b11b-5246ef426896/pawel_samuel_cv_21_02.pdf">/cv</a>
-      </li>
-      
-
-
-
-    </ul>
-  </nav>
-</header>
-
-  </head>
-
-  <body>
-    <br/>
-
-
-<div class="content-wrapper">
-
-
-  <h1 id="grüezi">Grüezi!</h1>
-<p>My name is Samuel and you found my spot on the internet.</p>
-<p>I’m a guy living in Zurich, Switzerland and currently doing a PhD in
-Biostatistics at the University of Zurich. My main research interest
-is the development of new methods to plan and analyze replication studies.</p>
-<p>I am enthusiastic about the R programming language and also involved
-in organizing events for the
-<a href="https://www.meetup.com/de-DE/Zurich-R-User-Group/">local R user group</a>.
-Join our events, if you like R too!</p>
-<hr>
-<h1 id="blog">Blog</h1>
-
-  
-  <ul>
+  a {
+    color: #3273dc;
      
-     
-     
-     <li>
-       <span class="date">2018/Jul/11</span> -
-       <a href="/post/xkcd-plots-with-r/">xkcd plots with R</a>
-     </li>
-     
-   </ul>
-</div>
+  }
 
-    <footer>
-      
+  .title {
+    text-decoration: none;
+    border: 0;
+  }
 
-<script>
-(function() {
-  function center_el(tagName) {
-    var tags = document.getElementsByTagName(tagName), i, tag;
-    for (i = 0; i < tags.length; i++) {
-      tag = tags[i];
-      var parent = tag.parentElement;
-      
-      if (parent.childNodes.length === 1) {
-        
-        if (parent.nodeName === 'A') {
-          parent = parent.parentElement;
-          if (parent.childNodes.length != 1) continue;
-        }
-        if (parent.nodeName === 'P') parent.style.textAlign = 'center';
-      }
+  .title span {
+    font-weight: 400;
+  }
+
+  nav a {
+    margin-right: 10px;
+  }
+
+  textarea {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  input {
+    font-size: 16px;
+  }
+
+  content {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    padding: 2px 5px;
+    background-color: #f2f2f2;
+  }
+
+  pre code {
+    color: #222;
+    display: block;
+    padding: 20px;
+    white-space: pre-wrap;
+    font-size: 14px;
+  }
+
+  div.highlight pre {
+    background-color: initial;
+    color: initial;
+  }
+
+  div.highlight code {
+    background-color: unset;
+    color: unset;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: #222;
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px;
+    text-align: center;
+  }
+
+  .helptext {
+    color: #777;
+    font-size: small;
+  }
+
+  .errorlist {
+    color: #eba613;
+    font-size: small;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: #8b6fcb;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #333;
+      color: #ddd;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong,
+    b {
+      color: #eee;
+    }
+
+    a {
+      color: #8cc2dd;
+    }
+
+    code {
+      background-color: #777;
+    }
+
+    pre code {
+      color: #ddd;
+    }
+
+    blockquote {
+      color: #ccc;
+    }
+
+    textarea,
+    input {
+      background-color: #252525;
+      color: #ddd;
+    }
+
+    .helptext {
+      color: #aaa;
     }
   }
-  var tagNames = ['img', 'embed', 'object'];
-  for (var i = 0; i < tagNames.length; i++) {
-    center_el(tagNames[i]);
-  }
-})();
-</script>
 
-      
-      <hr/>
-      <a href="https://github.com/SamCH93">GitHub</a> - <a href="https://twitter.com/SamuelPawel">Twitter</a>
-      
-      <br>
-      
-      built with <a href="https://github.com/rstudio/blogdown">blogdown</a> and <a href="https://github.com/goodroot/hugo-classic">hugo-classic</a>
-      
-    </footer>
-  </body>
+</style>
+</head>
+
+<body>
+
+  <header><h1>Samuel Pawel</h1>
+<nav>
+<a href="https://www.ebpi.uzh.ch/en/aboutus/departments/biostatistics/teambiostats/pawel_samuel.html">Research</a>
+
+<a href="https://twitter.com/SamuelPawel">Twitter</a>
+
+<a href="https://github.com/SamCH93">GitHub</a>
+
+</nav>
+</header>
+
+  <main>
+<h2 id="grüezi">Grüezi!</h2>
+<p>I am a statistical researcher based in Zurich, Switzerland. Currently, I am
+doing a PhD in Biostatistics at the University of Zurich under the supervision
+of Leonhard Held. At the most general level, I am interested in statistical
+inference, meta-science, and the intersection of the two. My preprints and
+publications can be found on <a href="https://scholar.google.com/citations?user=JAb7P1QAAAAJ&amp;hl=en">Google
+Scholar</a>.</p>
+<p>I try to promote good research practices in Switzerland by contributing to the
+<a href="https://www.swissrn.org/academy/">Swiss Reproducibility Network Academy</a>. I am
+also a fellow of the <a href="https://www.crs.uzh.ch/en.html">Center for Reproducible
+Science</a> from the University of Zurich.</p>
+<p>I am enthusiastic about the R programming language and involved in organizing
+events for the <a href="https://www.meetup.com/de-DE/Zurich-R-User-Group/">Zurich R user
+group</a>.</p>
+<p>Send me an
+<a href="https://www.ebpi.uzh.ch/en/aboutus/departments/biostatistics/teambiostats/pawel_samuel.html">email</a>
+if you have questions or are interested in working with me.</p>
+
+
+  </main>
+
+</body>
+
 </html>
-
