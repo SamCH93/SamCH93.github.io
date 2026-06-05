@@ -1,217 +1,78 @@
 <!DOCTYPE html>
-<html lang="en-US">
-
+<html lang="en">
 <head>
-	<meta name="generator" content="Hugo 0.79.1" />
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Samuel Pawel</title><style>
-  body {
-    font-family: Verdana, sans-serif;
-    margin: auto;
-    padding: 20px;
-    max-width: 720px;
-    text-align: left;
-    background-color: #fff;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    line-height: 1.5;
-    color: #444;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Samuel Pawel</title>
+<meta property="og:title" content="Samuel Pawel">
+<meta property="og:url" content="https://samch93.github.io">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%23111'/><text x='50' y='68' font-family='Georgia,serif' font-size='46' font-weight='400' text-anchor='middle' fill='%23fff'>SP</text></svg>">
+<style>
+:root {
+  --ink: #222;
+  --ink2: #888;
+  --paper: #f4f3f0;
+  --rule: #bbb;
+  --link: #00695c;
+  --link-ul: #a7d7d0;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #c0c0bc;
+    --ink2: #666;
+    --paper: #1e1e1c;
+    --rule: #555;
+    --link: #80cbc4;
+    --link-ul: #1a4a46;
   }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  strong,
-  b {
-    color: #222;
-  }
-
-  a {
-    color: #01a049;
-     
-  }
-
-  .title {
-    text-decoration: none;
-    border: 0;
-  }
-
-  .title span {
-    font-weight: 400;
-  }
-
-  nav a {
-    margin-right: 10px;
-  }
-
-  textarea {
-    width: 100%;
-    font-size: 16px;
-  }
-
-  input {
-    font-size: 16px;
-  }
-
-  content {
-    line-height: 1.6;
-  }
-
-  table {
-    width: 100%;
-  }
-
-  img {
-    max-width: 100%;
-  }
-
-  code {
-    padding: 2px 5px;
-    background-color: #f2f2f2;
-  }
-
-  pre code {
-    color: #222;
-    display: block;
-    padding: 20px;
-    white-space: pre-wrap;
-    font-size: 14px;
-  }
-
-  div.highlight pre {
-    background-color: initial;
-    color: initial;
-  }
-
-  div.highlight code {
-    background-color: unset;
-    color: unset;
-  }
-
-  blockquote {
-    border-left: 1px solid #999;
-    color: #222;
-    padding-left: 20px;
-    font-style: italic;
-  }
-
-  footer {
-    padding: 25px;
-    text-align: center;
-  }
-
-  .helptext {
-    color: #777;
-    font-size: small;
-  }
-
-  .errorlist {
-    color: #eba613;
-    font-size: small;
-  }
-
-   
-  ul.blog-posts {
-    list-style-type: none;
-    padding: unset;
-  }
-
-  ul.blog-posts li {
-    display: flex;
-  }
-
-  ul.blog-posts li span {
-    flex: 0 0 130px;
-  }
-
-  ul.blog-posts li a:visited {
-    color: #8b6fcb;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    body {
-      background-color: #333;
-      color: #ddd;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    strong,
-    b {
-      color: #eee;
-    }
-
-    a {
-      color: #8cc2dd;
-    }
-
-    code {
-      background-color: #777;
-    }
-
-    pre code {
-      color: #ddd;
-    }
-
-    blockquote {
-      color: #ccc;
-    }
-
-    textarea,
-    input {
-      background-color: #252525;
-      color: #ddd;
-    }
-
-    .helptext {
-      color: #aaa;
-    }
-  }
-
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 18px; text-rendering: optimizeLegibility; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.85;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 5rem 1.5rem 5rem;
+}
+main { border-left: 2px solid var(--rule); padding-left: 24px; }
+h1 { font-size: 2rem; font-weight: 700; margin-bottom: 1.5rem; letter-spacing: 0.01em; }
+p { font-size: 0.96rem; margin-bottom: 0.9em; }
+p:first-of-type { font-size: 1.08rem; }
+p:last-of-type { margin-bottom: 0; }
+a { color: var(--link); text-decoration: underline; text-decoration-color: var(--link-ul); text-underline-offset: 3px; }
+a:hover { text-decoration-color: var(--link); }
+nav { display: flex; flex-wrap: wrap; gap: 0 1.4rem; margin-top: 1.75rem; }
+nav a { font-size: 0.82rem; color: var(--ink2); text-decoration: none; }
+nav a:hover { color: var(--ink); }
+@media (max-width: 480px) {
+  body { padding: 2.5rem 1.25rem 3rem; }
+}
+@media print {
+  body { padding: 2cm; font-size: 11pt; max-width: none; }
+  main { border-left: 1pt solid #999; }
+  nav { display: none; }
+  a { color: inherit; text-decoration: none; }
+}
 </style>
+
 </head>
-
 <body>
-
-  <header><h1>Samuel Pawel</h1>
-<nav>
-<a href="https://www.ebpi.uzh.ch/en/research/biostat_department/group_biostatistics/team/pawel_samuel.html">Research</a>
-
-<a href="https://scicomm.xyz/web/@SamuelPawel">Mastodon</a>
-
-<a href="https://github.com/SamCH93">GitHub</a>
-
-</nav>
-</header>
-
-  <main>
-<h2 id="grüezi">Grüezi!</h2>
-<p>I am a statistical researcher based in Zurich, Switzerland. Currently, I am
-a Postdoctoral Researcher in the Department of Biostatistics at the University of Zurich. 
-At the most general level, I am interested in statistical
-inference, meta-science, and the intersection of the two. My preprints and
-publications can be found on <a href="https://scholar.google.com/citations?user=JAb7P1QAAAAJ&amp;hl=en">Google
-Scholar</a>.</p>
-<p>I try to promote good research practices in Switzerland by contributing to the
-<a href="https://www.swissrn.org/">Swiss Reproducibility Network</a>. I am
-also a fellow of the <a href="https://www.crs.uzh.ch/en.html">Center for Reproducible
-Science</a> from the University of Zurich.</p>
-<p>Send me an
-<a href="mailto:samuel[DOT]pawel[AT]uzh[DOT]ch">email</a>
-if you have questions or are interested in working with me.</p>
-
-
-  </main>
-
+<main>
+  <h1>Samuel Pawel</h1>
+  <p><em lang="de-CH">Grüezi!</em> I am a biostatistician based in Zurich, Switzerland, working as a Research Associate in the <a href="https://www.ebpi.uzh.ch/en/research/biostat_department/group_biostatistics_crs.html" target="_blank" rel="noopener">Department of Biostatistics</a> at the University of Zurich. My research sits at the intersection of statistical methodology, clinical trials, and meta-research, with a unifying focus on improving how scientific evidence is generated and evaluated.</p>
+  <p>I also contribute to the <a href="https://www.swissrn.org/" target="_blank" rel="noopener">Swiss Reproducibility Network</a> and am a fellow of the <a href="https://www.crs.uzh.ch/en.html" target="_blank" rel="noopener">Center for Reproducible Science and Research Synthesis</a> at the University of Zurich.</p>
+  <p>Feel free to get in touch if you have questions or want to collaborate.</p>
+  <nav>
+    <a href="https://scholar.google.com/citations?user=JAb7P1QAAAAJ&hl=en" target="_blank" rel="noopener">Publications</a>
+    <a href="https://www.ebpi.uzh.ch/en/research/biostat_department/group_biostatistics_crs/team/pawel_samuel.html" target="_blank" rel="noopener">Research</a>
+    <a href="https://github.com/SamCH93" target="_blank" rel="noopener">Code</a>
+    <a href="https://scicomm.xyz/web/@SamuelPawel" target="_blank" rel="noopener">Mastodon</a>
+    <a href="mailto:samuel&#46;pawel&#64;uzh&#46;ch">Email</a>
+  </nav>
+</main>
 </body>
-
 </html>
