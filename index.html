@@ -4,25 +4,27 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Samuel Pawel</title>
+<meta name="description" content="Personal website of Samuel Pawel">
 <meta property="og:title" content="Samuel Pawel">
-<meta property="og:url" content="https://samch93.github.io">
+<meta property="og:description" content="Personal website of Samuel Pawel">
+<meta property="og:url" content="https://samuelpawel.ch/">
 <meta property="og:type" content="website">
+<link rel="canonical" href="https://samuelpawel.ch/">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%23111'/><text x='50' y='68' font-family='Georgia,serif' font-size='46' font-weight='400' text-anchor='middle' fill='%23fff'>SP</text></svg>">
 <style>
 :root {
   --ink: #222;
-  --ink2: #888;
+  --ink2: #6a6a6a;
   --paper: #f4f3f0;
-  --rule: #bbb;
   --link: #00695c;
   --link-ul: #a7d7d0;
+  --sans: Helvetica, Arial, "Liberation Sans", sans-serif;
 }
 @media (prefers-color-scheme: dark) {
   :root {
     --ink: #c0c0bc;
-    --ink2: #666;
+    --ink2: #8a8a8a;
     --paper: #1e1e1c;
-    --rule: #555;
     --link: #80cbc4;
     --link-ul: #1a4a46;
   }
@@ -32,27 +34,49 @@ html { font-size: 18px; text-rendering: optimizeLegibility; }
 body {
   background: var(--paper);
   color: var(--ink);
-  font-family: Helvetica, Arial, sans-serif;
-  line-height: 1.85;
-  max-width: 800px;
+  font-family: var(--sans);
+  font-size: 1rem;
+  line-height: 1.62;
+  max-width: 35rem;
   margin: 0 auto;
-  padding: 5rem 1.5rem 5rem;
+  padding: 6rem 1.5rem 6rem;
 }
-main { border-left: 2px solid var(--rule); padding-left: 24px; }
-h1 { font-size: 2rem; font-weight: 700; margin-bottom: 1.5rem; letter-spacing: 0.01em; }
-p { font-size: 0.96rem; margin-bottom: 0.9em; }
+
+h1 {
+  font-size: 2.1rem;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.012em;
+  margin-bottom: 1.15rem;
+}
+
+p { margin-bottom: 1em; }
 p:last-of-type { margin-bottom: 0; }
-a { color: var(--link); text-decoration: underline; text-decoration-color: var(--link-ul); text-underline-offset: 3px; }
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-decoration-color: var(--link-ul);
+  text-underline-offset: 3px;
+}
 a:hover { text-decoration-color: var(--link); }
-nav { display: flex; flex-wrap: wrap; gap: 0 1.4rem; margin-top: 1.75rem; }
-nav a { font-size: 0.82rem; color: var(--ink2); text-decoration: none; }
+a:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+nav { font-size: 0.78rem; line-height: 1.9; margin-bottom: 2.6rem; }
+nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: 0 1.3rem; }
+nav a { color: var(--ink2); text-decoration: none; }
 nav a:hover { color: var(--ink); }
+
 @media (max-width: 480px) {
-  body { padding: 2.5rem 1.25rem 3rem; }
+  body { padding: 3rem 1.25rem 3.5rem; }
+  h1 { font-size: 1.9rem; }
 }
 @media print {
   body { padding: 2cm; font-size: 11pt; max-width: none; }
-  main { border-left: 1pt solid #999; }
   nav { display: none; }
   a { color: inherit; text-decoration: none; }
 }
@@ -62,17 +86,25 @@ nav a:hover { color: var(--ink); }
 <body>
 <main>
   <h1>Samuel Pawel</h1>
+
+  <nav aria-label="Profiles and contact">
+    <ul>
+      <li><a href="https://scholar.google.com/citations?user=JAb7P1QAAAAJ&hl=en" target="_blank" rel="noopener">Publications</a></li>
+      <li><a href="https://www.ebpi.uzh.ch/en/research/biostat_department/group_biostatistics_crs/team/pawel_samuel.html" target="_blank" rel="noopener">Research</a></li>
+      <li><a href="https://github.com/SamCH93" target="_blank" rel="noopener">Code</a></li>
+      <li><a href="https://samch93.r-universe.dev/packages" target="_blank" rel="noopener">R packages</a></li>
+    </ul>
+    <ul>
+      <li><a href="https://orcid.org/0000-0003-2779-320X" target="_blank" rel="noopener">ORCID</a></li>
+      <li><a href="https://scicomm.xyz/web/@SamuelPawel" target="_blank" rel="noopener me">Mastodon</a></li>
+      <li><a href="https://bsky.app/profile/samuelpawel.bsky.social" target="_blank" rel="noopener me">Bluesky</a></li>
+      <li><a href="mailto:samuel&#46;pawel&#64;uzh&#46;ch">Email</a></li>
+    </ul>
+  </nav>
+
   <p><em lang="de-CH">Grüezi!</em> I am a biostatistician based in Zurich, Switzerland, working as a Research Associate in the <a href="https://www.ebpi.uzh.ch/en/research/biostat_department/group_biostatistics_crs.html" target="_blank" rel="noopener">Department of Biostatistics</a> at the University of Zurich. My research spans statistical methodology, clinical trials, and meta-research.</p>
   <p>I also contribute to the <a href="https://www.swissrn.org/" target="_blank" rel="noopener">Swiss Reproducibility Network</a> and am a fellow of the <a href="https://www.crs.uzh.ch/en.html" target="_blank" rel="noopener">Center for Reproducible Science and Research Synthesis</a> at the University of Zurich.</p>
   <p>Feel free to get in touch if you have questions or want to collaborate.</p>
-  <nav>
-    <a href="https://scholar.google.com/citations?user=JAb7P1QAAAAJ&hl=en" target="_blank" rel="noopener">Publications</a>
-    <a href="https://www.ebpi.uzh.ch/en/research/biostat_department/group_biostatistics_crs/team/pawel_samuel.html" target="_blank" rel="noopener">Research</a>
-    <a href="https://github.com/SamCH93" target="_blank" rel="noopener">Code</a>
-    <a href="https://orcid.org/0000-0003-2779-320X" target="_blank" rel="noopener">ORCID</a>
-    <a href="https://scicomm.xyz/web/@SamuelPawel" target="_blank" rel="noopener me">Mastodon</a>
-    <a href="mailto:samuel&#46;pawel&#64;uzh&#46;ch">Email</a>
-  </nav>
 </main>
 </body>
 </html>
